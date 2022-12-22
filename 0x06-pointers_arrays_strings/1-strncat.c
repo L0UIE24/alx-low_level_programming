@@ -3,11 +3,11 @@
 /**
  * _strncat - concatenate two strings
  * using at most n bytes from src
- * @dest: input value
- * @src: input value
- * @n: input value
+ * @dest: pointer destination
+ * @src: pointer of bytes
+ * @n: number of byte to receive
  *
- * Return: dest
+ * Return: void
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -20,6 +20,7 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 	dest[dest_len + i] = src[i];
 
+	/*should end with a strig of char*/
 	dest[dest_len + i] = '\0';
 	return (dest);
 }
